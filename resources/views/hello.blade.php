@@ -10,7 +10,7 @@
 
 <body>
 	<main>
-		<h1>HELLO WORLD</h1>
+		<h1>{{$hello}}</h1>
 	</main>
 </body>
 
