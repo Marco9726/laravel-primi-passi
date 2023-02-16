@@ -12,8 +12,30 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//home
 Route::get('/', function () {
-	$hello = 'Hello World';
-	return view('hello', compact('hello'));
-})->name('Homepage');
+	$menu = [
+		'FAQ' => '/FAQ',
+		'about_us' => '/about-us',
+		'contacts' => 'contacts'
+	];
+	return view('home', compact('menu'));
+})->name('homepage');
+
+//FAQ
+Route::get('/FAQ', function () {
+	$hello = 'pagina FAQ';
+	return view('FAQ', compact('hello'));
+})->name('FAQ');
+
+//ABOUT-US
+Route::get('/about-us', function () {
+	$hello = 'pagina about-us';
+	return view('about-us', compact('hello'));
+})->name('about-us');
+
+//CONTACTS
+Route::get('/contacts', function () {
+	$hello = 'pagina contatti';
+	return view('contacts', compact('hello'));
+})->name('contacts');
